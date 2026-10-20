@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Epya.Cache.Common</RootNamespace>
+    <AssemblyName>Epya.Cache.Common</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Replaces Epya.Cache.Common.nuspec: `dotnet pack` builds the package. -->
+  <PropertyGroup>
+    <PackageId>Epya.Cache.Common</PackageId>
+    <Version>1.2.3-1-beta</Version>
+    <Title>Epya.Cache.Common</Title>
+    <Description>this package will add http cache for all Get JSON responses</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <!-- Extensions.cs hangs the cache registration off IServiceCollection/IApplicationBuilder. -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="NugetCmd.txt" />
+  </ItemGroup>
+
+</Project>

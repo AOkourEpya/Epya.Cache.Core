@@ -1,0 +1,16 @@
+
+-- Packaging now comes from the csproj (SDK-style), not a .nuspec.
+-- The Epya.Cache.Common.nuspec file was removed in the .NET 10 upgrade; the
+-- <PackageId>/<Version>/<Description> properties in Epya.Cache.Common.csproj
+-- replace it, and dependencies are picked up from the PackageReference items.
+
+cd .\Epya.Cache.Common
+dotnet pack -c Release
+dotnet nuget push .\bin\Release\Epya.Cache.Common.1.2.3-1-beta.nupkg --api-key <API_KEY> --source https://devops.epyasolutions.com/EPYA/_packaging/EPYAFeed/nuget/v3/index.json
+
+--https://nuget.epyasolutions.com/nuget
+--http://localhost:8080/nuget
+--https://devops.epyasolutions.com/EPYA/_packaging/EPYAFeed/nuget/v3/index.json
+
+--for adding the package source
+--dotnet nuget add source https://nuget.epyasolutions.com/nuget --name Epya --username <USER> --password <PASSWORD>

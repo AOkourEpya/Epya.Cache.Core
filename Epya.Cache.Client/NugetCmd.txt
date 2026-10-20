@@ -1,0 +1,17 @@
+
+-- Packaging now comes from the csproj (SDK-style), not a .nuspec.
+-- The Epya.Cache.Client.nuspec file was removed in the .NET 10 upgrade; the
+-- <PackageId>/<Version>/<Description> properties in Epya.Cache.Client.csproj
+-- replace it, and the dependency on Epya.Cache.Common is picked up from the
+-- ProjectReference automatically.
+
+cd .\Epya.Cache.Client
+dotnet pack -c Release
+dotnet nuget push .\bin\Release\Epya.Cache.Client.1.2.3-1-beta.nupkg --api-key <API_KEY> --source https://devops.epyasolutions.com/EPYA/_packaging/EPYAFeed/nuget/v3/index.json
+
+--https://nuget.epyasolutions.com/nuget
+--http://localhost:8080/nuget
+--https://devops.epyasolutions.com/EPYA/_packaging/EPYAFeed/nuget/v3/index.json
+
+--for adding the package source
+--dotnet nuget add source https://nuget.epyasolutions.com/nuget --name Epya --username <USER> --password <PASSWORD>

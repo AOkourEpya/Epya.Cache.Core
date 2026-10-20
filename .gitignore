@@ -1,0 +1,31 @@
+# Ignore build output directories
+**/bin/
+**/obj/
+
+# Ignore Visual Studio files
+.vs/
+.vscode/
+.idea/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore log and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore compiled assemblies and files
+*.dll
+*.exe
+*.pdb
+
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore npm and node_modules for web projects
+node_modules/

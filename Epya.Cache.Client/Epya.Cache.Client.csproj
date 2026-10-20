@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Epya.Cache.Client</RootNamespace>
+    <AssemblyName>Epya.Cache.Client</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Replaces Epya.Cache.Client.nuspec: `dotnet pack` builds the package. -->
+  <PropertyGroup>
+    <PackageId>Epya.Cache.Client</PackageId>
+    <Version>1.2.3-1-beta</Version>
+    <Title>Epya.Cache.Client</Title>
+    <Description>this package will add http cache for all Get JSON responses</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <!-- CacheAttribute is an ASP.NET Core MVC filter (was a System.Web.Http filter). -->
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Epya.Cache.Common\Epya.Cache.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="NugetCmd.txt" />
+  </ItemGroup>
+
+</Project>

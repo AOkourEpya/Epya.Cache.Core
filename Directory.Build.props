@@ -1,0 +1,18 @@
+<Project>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <!-- Assembly identity is kept at the pre-upgrade values so existing binding
+         redirects and consumers are unaffected by the .NET 10 move. -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+
+    <Company>EPYA</Company>
+    <Authors>EPYA</Authors>
+    <Copyright>© 2025 EPYA. All rights reserved.</Copyright>
+  </PropertyGroup>
+
+</Project>
